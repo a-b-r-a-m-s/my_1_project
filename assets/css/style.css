@@ -103,6 +103,7 @@ hr {
   z-index: 1000;
 }
 .header.fixed {
+  padding: 10px 0;
   background-color: #eb8b8d;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 
@@ -175,7 +176,9 @@ hr {
 .nav__link.active {
   color: #fce38a;
 }
+
 /*Nav toggle*/
+
 .nav-toggle {
   width: 30px;
   padding: 10px 0;
@@ -191,6 +194,10 @@ hr {
   top: 24px;
   right: 24px;
   z-index: 1;
+}
+
+.nav-toggle:focus {
+  outline: 0;
 }
 .nav-toggle__item {
   display: block;
@@ -655,11 +662,15 @@ hr {
 /* Reviews */
 
 .reviews {
-  padding: 0 110px;
   position: relative;
 }
 
+.reviews .slick-slider {
+  padding: 0 110px;
+}
+
 .reviews__item {
+  min-height: 210px;
   padding-left: 255px;
   position: relative;
 }
@@ -698,16 +709,25 @@ hr {
   background-color: #f38181;
 }
 
-.reviews__btn {
+.slick-arrow {
+  display: block;
   font-size: 0;
   color: transparent;
+
+  border: 0;
+  background: none;
+  cursor: pointer;
+
   position: absolute;
   top: 50%;
   z-index: 1;
   transform: translateY(-50%);
 }
+.slick-arrow:focus {
+  outline: 0;
+}
 
-.reviews__btn:after {
+.slick-arrow:after {
   content: "";
   display: block;
   width: 16px;
@@ -717,12 +737,12 @@ hr {
   border-left: 2px solid #ccc;
 }
 
-.reviews__btn--prev {
+.slick-prev {
   transform: rotate(-45deg);
   left: 0;
 }
 
-.reviews__btn--next {
+.slick-next {
   transform: rotate(135deg);
   right: 0;
 }
@@ -1283,7 +1303,7 @@ hr {
     border-bottom: 0;
   }
   /* Reviews */
-  .reviews {
+  .reviews .slick-slider {
     padding: 0 60px;
   }
   .reviews__photo {
@@ -1343,6 +1363,10 @@ hr {
     top: 100%;
     left: 0;
     background-color: #eb8b8d;
+  }
+
+  .nav.active {
+    display: block;
   }
   .nav__link {
     display: block;
@@ -1493,10 +1517,10 @@ hr {
     right: -80px;
   }
   /* Reviews */
-  .reviews {
+  .reviews .slick-slider {
     padding: 0;
   }
-  .reviews__btn {
+  .slick-arrow {
     top: 18%;
   }
   /*logos*/
@@ -1511,10 +1535,7 @@ hr {
   .logos__img {
     margin: 0 auto;
   }
-  /*Works*/
-  .works__col {
-    width: 100%;
-  }
+
   /*Clients*/
   .clients__photo {
     position: static;
@@ -1537,6 +1558,12 @@ hr {
   }
   .subscribe__input,
   .subscribe__btn {
+    width: 100%;
+  }
+}
+@media (max-width: 460px) {
+  /*Works*/
+  .works__col {
     width: 100%;
   }
 }
