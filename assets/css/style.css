@@ -431,7 +431,8 @@ hr {
 
   transition: transform 0.2s linear;
 }
-
+.nav {
+}
 .card__img img {
   display: block;
   max-width: 100%;
