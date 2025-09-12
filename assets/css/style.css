@@ -820,8 +820,10 @@ hr {
 }
 
 .works__image {
+  width: 100%;
+
   display: block;
-  max-width: 100%;
+
   height: auto;
 
   transition: opacity 0.2s linear;
